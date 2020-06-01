@@ -1,0 +1,38 @@
+<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Here's All The Flights</title>
+    <!-- <a href="/flights/new">New Flight</a> -->
+</head>
+<body>
+    <h1>Here's All The Flights</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Airline</th>
+                <th>Airport</th>
+                <th>FLight Number</th>
+                <th>Departure Date</th>
+                <th>Destinations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% flights.forEach(function(flight) { %>
+                <tr>
+                    <td><%= flight.airline %></td>
+                    <td><%= flight.airport %></td>
+                    <td><%= flight.flightNo %></td>
+                    <td><%= flight.departs %></td>
+                    <td><a href="/flights/show">Details</a></td>
+                    <td><%= flight.destinations %></td>
+
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
+<%- include('../partials/footer') %>

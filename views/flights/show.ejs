@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="show-page">
+        <div>Airline: </div>
+        <div><%= flight %></div>
+        <div>Airport: </div>
+        <div><%= flight %></div>
+        <div>Flight Number: </div>
+        <div><%= flight %></div>
+        <div>Departs: </div>
+        <div><%= flight %></div>
+        <div>Details</div>
+      </section>
+      
+      </section>
+      <!-- new markup below -->
+      <br><br><h2>Destinations</h2>
+      <form id="add-destination-form" method="POST"
+        action="/flights/<%= flight._id %>/destinations">
+        <label>Destination:</label>
+        <textarea name="content"></textarea>
+        <label>Airport</label>
+        <select name="airport & arrival">
+        </select>
+        <input type="submit" value="Add destinations">
+      </form>      
+</body>
+</html>
+<%- include('../partials/footer') %>
