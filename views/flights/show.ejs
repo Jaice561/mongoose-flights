@@ -1,4 +1,3 @@
-<%- include('../partials/header') %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+  <a href="/flights/new">New Flight</a>
     <section id="show-page">
         <div>Airline: </div>
         <div><%= flight.Airline %></div>
@@ -38,7 +38,7 @@
       </section>
       <br><br><h2>Destinations</h2>
       <form id="add-destination-form" method="POST"
-        action="/flights/<%= flight._id %>/destinations">
+        action="/flights/<%= flight._id %>">
         <label for="airports">Airports</label>        
         <select name="airport">          
            <option value="DFW">DFW</option>    
@@ -53,4 +53,3 @@
       </form>
 </body>
 </html>
-<%- include('../partials/footer') %>
